@@ -28,4 +28,4 @@ Thank you for considering contribute for the transaction system! This is a docum
 Before seending the pull request, execute the tests locally using a the following command:
 
 ```bash
-to do.
+dotnet test
