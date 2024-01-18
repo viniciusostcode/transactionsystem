@@ -11,11 +11,11 @@ namespace Sistema.Repositories
     {
         private readonly TransactionSystemDbContext _dbContextTransaction;
 
-        private readonly UserRepository _userRepository;
-        public TransactionRepository(TransactionSystemDbContext dbContextTransaction)
+        private readonly IUserRepository _userRepository;
+        public TransactionRepository(TransactionSystemDbContext dbContextTransaction, IUserRepository userRepository)
         {
             _dbContextTransaction = dbContextTransaction;
-            _userRepository = new UserRepository(dbContextTransaction);
+            _userRepository = userRepository;
         }
         public async Task<List<TransactionModel>> GetAll()
         {
@@ -24,7 +24,9 @@ namespace Sistema.Repositories
 
         public async Task<TransactionModel> GetTransactionById(int id)
         {
-            return await _dbContextTransaction.Transactions.Include(x => x.User).FirstOrDefaultAsync(x => x.Id == id);
+            TransactionModel? result = await _dbContextTransaction.Transactions.Include(x => x.User).FirstOrDefaultAsync(x => x.Id == id);
+
+            return result;
         }
         public async Task<TransactionModel> AddTransaction(TransactionModel transactionModel)
         {

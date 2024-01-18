@@ -11,24 +11,43 @@ namespace Sistema.Controllers
         private readonly ITransactionRepository _transactionRepository;
         public TransactionController(ITransactionRepository transactionRepository)
         {
-            _transactionRepository = transactionRepository;   
+            _transactionRepository = transactionRepository;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<TransactionModel>>> GetAllTransactions()
         {
-            List<TransactionModel> transactions = await _transactionRepository.GetAll();
+            try
+            {
+                List<TransactionModel> transactions = await _transactionRepository.GetAll();
 
-            return Ok(transactions);
-        } 
-        
-        [HttpGet("{id}")]
-        public async Task<ActionResult<List<TransactionModel>>> GetTransactionById(int id)
-        {
-            TransactionModel transaction = await _transactionRepository.GetTransactionById(id);
-            return Ok(transaction);
+                if (transactions != null && transactions.Count > 0) return Ok(transactions);
+
+                return NotFound("Result not found.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
-        
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<TransactionModel>> GetTransactionById(int id)
+        {
+            try
+            {
+                TransactionModel transactions = await _transactionRepository.GetTransactionById(id);
+
+                if (transactions != null) return Ok(transactions);
+
+                return NotFound("Result not found.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<TransactionModel>> AddTransaction([FromBody] TransactionModel transactionModel)
         {
@@ -44,7 +63,7 @@ namespace Sistema.Controllers
 
             return Ok(transaction);
         }
-        
+
         [HttpDelete("{id}")]
         public async Task<ActionResult<TransactionModel>> DeleteTransaction(int id)
         {
