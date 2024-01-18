@@ -21,7 +21,7 @@ namespace Sistema.Controllers
             {
                 List<TransactionModel> transactions = await _transactionRepository.GetAll();
 
-                if (transactions != null && transactions.Count > 0) return Ok(transactions);
+                if (transactions != null) return Ok(transactions);
 
                 return NotFound("Result not found.");
             }

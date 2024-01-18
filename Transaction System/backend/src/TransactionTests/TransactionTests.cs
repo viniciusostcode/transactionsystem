@@ -39,8 +39,6 @@ namespace TransactionTests
 
             var controller = new TransactionController(mockRepository.Object);
 
-            int id = 1;
-
             mockRepository.Setup(repo => repo.GetAll()).ReturnsAsync(new List<TransactionModel>());
 
             var result = await controller.GetAllTransactions();

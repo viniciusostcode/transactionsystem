@@ -19,7 +19,8 @@ namespace Sistema.Repositories
         }
         public async Task<List<TransactionModel>> GetAll()
         {
-            return await _dbContextTransaction.Transactions.Include(x => x.User).ToListAsync();
+            List<TransactionModel>? result = await _dbContextTransaction.Transactions.Include(x => x.User).ToListAsync();
+            return result;
         }
 
         public async Task<TransactionModel> GetTransactionById(int id)
