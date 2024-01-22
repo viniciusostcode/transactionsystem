@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'transactionsystem'
           slot-name: 'Production'
-          package: .
+          package: './TransactionSystem/backend/src'
           
