@@ -29,6 +29,8 @@ Install EntityFrameworkCore
 ```
 Set the appsettings.json file with your string connection
 
+Example
+
 ![App Screenshot](https://uploaddeimagens.com.br/images/004/714/167/original/Screenshot.png?1705427509)
 
 Run the migration
