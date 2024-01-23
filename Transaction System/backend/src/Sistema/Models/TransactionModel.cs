@@ -7,7 +7,7 @@ namespace Sistema.Models
         public int? Id { get; set; }
         public string Price { get; set; }
         public string Situation { get; set; }
-        public decimal Quantity { get; set; }
+        public int Quantity { get; set; }
         public DateTime? Date { get; set; }
         public string? Coin { get; set; }
         public string? Profit { get; set; }

@@ -56,6 +56,14 @@ namespace Sistema.Controllers
             return Ok(transaction);
         }
 
+        [HttpPost("list")]
+        public async Task<ActionResult<TransactionModel>> AddTransactionList([FromBody] List<TransactionModel> transactionModel)
+        {
+            List<TransactionModel> transaction = await _transactionRepository.AddTransactionList(transactionModel);
+
+            return Ok(transaction);
+        }
+
         [HttpPut("{id}")]
         public async Task<ActionResult<TransactionModel>> UpdateTransaction(int id, [FromBody] TransactionModel transactionModel)
         {

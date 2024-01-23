@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sistema.Data;
 
@@ -11,9 +12,10 @@ using Sistema.Data;
 namespace Sistema.Migrations
 {
     [DbContext(typeof(TransactionSystemDbContext))]
-    partial class TransactionSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240123163253_UpdatingQuantity")]
+    partial class UpdatingQuantity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
