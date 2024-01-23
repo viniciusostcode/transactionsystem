@@ -42,9 +42,11 @@ Run the migration
 ```
 ## Run 
 
-Now you can run the front end project with any text editor.
+Now you can run the ASP.NET web api with:
 
-
+```bash
+  dotnet run
+```
 
 ## Contribuitons
 
