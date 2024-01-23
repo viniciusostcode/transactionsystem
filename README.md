@@ -27,9 +27,9 @@ Install EntityFrameworkCore
 ```bash
   dotnet add package Microsoft.EntityFrameworkCore.Tools --version 6.0.0
 ```
-Set the appsettings.json file with your string connection
+Create a local SQL server (https://stackoverflow.com/questions/43355971/create-local-sql-server-database), after that, set the appsettings.json file with your string connection
 
-Example
+Example:
 
 ![App Screenshot](https://uploaddeimagens.com.br/images/004/714/167/original/Screenshot.png?1705427509)
 
