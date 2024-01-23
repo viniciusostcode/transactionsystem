@@ -1,0 +1,16 @@
+﻿# Ignorar arquivos de compilação
+*.exe
+*.dll
+
+# Ignorar arquivos de configuração do Visual Studio
+*.suo
+*.user
+*.suo
+.vscode/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios bin e obj
+bin/
+obj/

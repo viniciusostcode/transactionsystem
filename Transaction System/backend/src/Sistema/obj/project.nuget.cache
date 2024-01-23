@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wULc0Eh+eC5iLa9pDUXUxvpQYx0BuVgZqmhDB9G8gY+UZS0ydqUu3oQcL2qufDcQ8vSOrBH4kTAZVQpp7ciOsQ==",
+  "dgSpecHash": "XR/Lmiz9zhE6z9bHEQwOzBSlUTnzHAm7ediCHqeWe1KvDFNfPHc+9iv6qnYBJ6frjxoFfTRZ3kli1NsRyq/opw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinicius\\Documents\\Curso udemy\\transactionsystem\\Transaction System\\backend\\src\\Sistema\\Sistema.csproj",
+  "projectFilePath": "C:\\Users\\Vinicius\\Documents\\Projetos\\transactionsystem\\Transaction System\\backend\\src\\Sistema\\Sistema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vinicius\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Vinicius\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
