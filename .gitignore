@@ -14,3 +14,4 @@
 # Ignorar diretórios bin e obj
 bin/
 obj/
+/Transaction System/backend/src/Sistema/appsettings.json
