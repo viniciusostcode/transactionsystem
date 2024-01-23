@@ -36,7 +36,7 @@ namespace Sistema
             }
 
             app.UseCors(options => options
-               .WithOrigins("http://127.0.0.1:5500") 
+               .WithOrigins(origin => true) 
                .AllowAnyMethod()
                .AllowAnyHeader()
            );
