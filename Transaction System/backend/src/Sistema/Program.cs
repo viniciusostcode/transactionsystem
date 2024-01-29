@@ -36,7 +36,7 @@ namespace Sistema
             }
 
             app.UseCors(options => options
-               .WithOrigins(origin => true) 
+               .WithOrigins("https://localhost:7095") 
                .AllowAnyMethod()
                .AllowAnyHeader()
            );
