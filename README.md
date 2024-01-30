@@ -1,14 +1,14 @@
 
 # Transaction System
 
-This is a modest CRUD project to keep safe anyone's transaction, using .NET Core 6 and ASP.NET Core 6.5 . About data acess, has been used SQL and Entity Framework Core 6.0 as ORM with migrations, adopting a approach code first.
+This is a CRUD project to keep safe anyone's transaction, using .NET Core 6 and ASP.NET Core 6.5 and the structure razor pages. About data acess, has been used SQL and Entity Framework Core 6.0 as ORM with migrations, adopting a approach code first.
 
 
 ## Stack
 
-**Front-end:** HTML, CSS, JavaScript
+**Front-end:** Razor Pages
 
-**Back-end:** .NET, SQL
+**Back-end:** .NET, SQL, ASP.NET
 
 
 ## Installation 
