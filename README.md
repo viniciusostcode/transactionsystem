@@ -56,8 +56,15 @@ Check out `contribuindo.md` to learn how to get started.
 
 Please, follow code of conduct about this project.
 
-
 ## Feedback
 
 If you got any feedback,  let me know via fnkcontato@gmail.com
+
+## [V2.0.0] - 29/01/2024
+
+### Novidades
+
+- Switching the project to a razor pages structure.
+
+
 
